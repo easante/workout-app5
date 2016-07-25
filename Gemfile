@@ -27,7 +27,7 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap-sass', '~> 3.3.6'
-gem 'autoprefixer-rails', '~>6.3.7'
+#gem 'autoprefixer-rails', '~>6.3.7'
 gem 'devise', '~>4.2.0'
 
 # Use Capistrano for deployment
@@ -36,7 +36,7 @@ gem 'devise', '~>4.2.0'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
-  gem 'rspec-rails', '3.1.0'
+  gem 'rspec-rails', '3.5.1'
 end
 
 group :development do
