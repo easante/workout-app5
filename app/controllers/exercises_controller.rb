@@ -4,6 +4,11 @@ class ExercisesController < ApplicationController
 
   def index
     @exercises = current_user.exercises
+#fail
+    # respond_to do |format|
+    #   format.json { render json: @exercises }
+    #   format.html
+    # end
   end
 
   def show
@@ -17,10 +22,10 @@ class ExercisesController < ApplicationController
     @exercise = current_user.exercises.new(exercise_params)
 
     if @exercise.save
-      flash[:success] = 'Exercise has been created'
+      flash[:notice] = 'Exercise has been created'
       redirect_to [current_user, @exercise]
     else
-      flash[:danger] = 'Exercise has not been created'
+      flash[:alert] = 'Exercise has not been created'
       render :new
     end
   end

@@ -30,6 +30,8 @@ gem 'bootstrap-sass', '~> 3.3.6'
 #gem 'autoprefixer-rails', '~>6.3.7'
 gem 'devise', '~>4.2.0'
 gem 'jquery-ui-rails', '5.0.5'
+#gem 'd3-rails', '3.5.17'
+gem 'd3-rails', '4.1.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
