@@ -24,4 +24,19 @@ RSpec.feature "Editing Exercise" do
     expect(page).to have_content(45)
     expect(page).not_to have_content(48)
   end
+
+  scenario "with invalid data fails" do
+    visit "/"
+
+    click_link "My Lounge"
+    link = "a[href='/users/#{@owner.id}/exercises/#{@owner_exer.id}/edit']"
+    find(link).click
+
+    fill_in "Duration", with: -30
+    click_button "Update Exercise"
+    
+	  expect(page).to have_content("Exercise has not been updated")
+    expect(page).to have_content(@owner_exer.duration_in_min)
+    expect(page).not_to have_content(-30)
+  end
 end
