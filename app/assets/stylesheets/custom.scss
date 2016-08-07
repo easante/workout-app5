@@ -55,6 +55,10 @@ body {
   color: #ffffff;
 }
 
+.navbar-form {
+  margin-top: 20px;
+}
+
 // Devise Error Messages
 #error_explanation {
  background-color: #f2dede;
@@ -68,17 +72,23 @@ body {
  font-size: 150%;
 }
 
-// path {
-//   stroke: blue;
-//   stroke-width: 1;
-// }
-//
-// .axis path, .axis line {
-//   fill: none;
-//   stroke: red;
-//   stroke-width: 2;
-// }
+// Link styling
+.link {
+  margin-bottom: 5px;
+}
 
+#back-btn {
+  margin-left: -10px;
+  margin-top: 30px;
+}
+
+.destroy-btn:hover {
+  color: #ff0000;
+  font-weight: bold;
+  font-size: 120%;
+}
+
+// Chart Styling
 path {
 stroke: steelblue; stroke-width: 2; fill: none;
 }

@@ -21,7 +21,9 @@
             <td><%= link_to 'Edit', [:edit, current_user, exercise]
              %></td>
             <td><%= link_to 'Destroy', [current_user, exercise],
-            method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                      class: 'destroy-btn',
+                      method: :delete,
+                      data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <% end %>
       </tbody>
@@ -37,7 +39,7 @@
     <br>
   <% end %>
   <%= link_to 'New Workout', new_user_exercise_path(current_user),
-      class: "btn btn-primary link" %>
+      class: "btn btn-success link" %>
   <%= content_tag :div, "", id: "chart", data: {workouts: @exercises} %>
 </div>
 
@@ -55,7 +57,7 @@
         <%= link_to "Unfollow",
           friendship_path(current_user.current_friendship(friend)),
           method: :delete, data: {confirm: "Are you sure?"},
-          class: "btn btn-primary link" %>
+          class: "btn btn-success link" %>
       </div>
     </div>
   <% end %>

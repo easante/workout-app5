@@ -1,11 +1,22 @@
-var ready = function() {
+//var ready = function() {
+document.addEventListener("turbolinks:load", function(){
   $('#exercise_workout_date').datepicker({ dateFormat: 'yy-mm-dd' });
 
-  if($(location).attr('pathname').match(/\/users\/\d+\/exercises$/i)) {
+  var regex = /\/users\/\d+\/exercises$|\/Friendships\/\d+/i;
+
+  if($(location).attr('pathname').match(regex)) {
     drawChart();
   }
+});
 
-};
+
+  // $('#exercise_workout_date').datepicker({ dateFormat: 'yy-mm-dd' });
+  //
+  // if($(location).attr('pathname').match(/\/users\/\d+\/exercises$/i)) {
+  //   drawChart();
+  // }
+
+//};
 
 var drawChart = function() {
 
@@ -65,7 +76,7 @@ svg.append("g")
  // x axis label
  svg.append("text")
     .attr("x", width / 2)
-    .attr("y", height + margin.top + 20)
+    .attr("y", height + margin.top - 15)
     .style("text-anchor", "middle")
     .text("Date of workout")
 
@@ -92,5 +103,5 @@ svg.append("text")
     .text("Workout duration vs Workout date")
 };
 
-$(document).ready(ready);
-$(document).on("page:load", ready);
+// $(document).ready(ready);
+// $(document).on("page:load", ready);
