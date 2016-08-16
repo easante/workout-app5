@@ -7,6 +7,9 @@ document.addEventListener("turbolinks:load", function(){
   if($(location).attr('pathname').match(regex)) {
     drawChart();
   }
+
+  var height = $('#messages-box').height();
+  $('#followers').css('height', height);
 });
 
 
