@@ -1,5 +1,7 @@
 //var ready = function() {
-document.addEventListener("turbolinks:load", function(){
+$(document).ready(function() {
+
+//document.addEventListener("turbolinks:load", function(){
   $('#exercise_workout_date').datepicker({ dateFormat: 'yy-mm-dd' });
 
   var regex = /\/users\/\d+\/exercises$|\/Friendships\/\d+/i;
@@ -10,6 +12,7 @@ document.addEventListener("turbolinks:load", function(){
 
   var height = $('#messages-box').height();
   $('#followers').css('height', height);
+
 });
 
 
