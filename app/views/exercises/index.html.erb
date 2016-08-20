@@ -60,7 +60,6 @@
         <div id="chat-box" data-room-id=<%= current_room.id %>>
           <% @messages.each do |message| %>
             <%= render partial: 'shared/message', locals: { message: message } %>
-            <hr class="msg" />
           <% end %>
         </div>
 
